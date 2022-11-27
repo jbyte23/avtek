@@ -1,0 +1,21 @@
+{
+  "name": "avtek-app",
+  "version": "1.0.0",
+  "description": "Desktop app for renting a car",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Bajt",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.3.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.2",
+    "jquery": "^3.6.1",
+    "moment": "^2.29.4"
+  }
+}

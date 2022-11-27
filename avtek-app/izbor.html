@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/datepicker/daterangepicker.css">
+    <title>Avtek</title>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="my-5">
+            <form id="izborForm" class="needs-validation" novalidate>
+                <div class="row mb-3" id="datumNajema">
+                    <div class="col-md-6">
+                        <label for="obdobjeNajema" class="form-label">Obdobje najema:</label>
+                        <input type="datetime" class="form-control" id="obdobjeNajema" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="krajPrevzema" class="form-label">Kraj prevzema:</label>
+                        <select class="form-select" id="krajPrevzema" required>
+                            <option value="Ljubljana">Ljubljana</option>
+                            <option value="Maribor">Maribor</option>
+                            <option value="Celje">Celje</option>
+                            <option value="Kranj">Kranj</option>
+                            <option value="Velenje">Velenje</option>
+                            <option value="Koper">Koper</option>
+                            <option value="Novo Mesto">Novo Mesto</option>
+                            <option value="Murska Sobota">Murska Sobota</option>
+                            <option value="Jesenice">Jesenice</option>
+                            <option value="Portorož">Portorož</option>
+                            <option value="Letališče Brnik">Letališče Brnik</option>
+                            <option value="Letališče Maribor">Letališče Maribor</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="krajOddaje" class="form-label">Kraj oddaje:</label>
+                        <select class="form-select" id="krajOddaje" required>
+                            <option value="Ljubljana">Ljubljana</option>
+                            <option value="Maribor">Maribor</option>
+                            <option value="Celje">Celje</option>
+                            <option value="Kranj">Kranj</option>
+                            <option value="Velenje">Velenje</option>
+                            <option value="Koper">Koper</option>
+                            <option value="Novo Mesto">Novo Mesto</option>
+                            <option value="Murska Sobota">Murska Sobota</option>
+                            <option value="Jesenice">Jesenice</option>
+                            <option value="Portorož">Portorož</option>
+                            <option value="Letališče Brnik">Letališče Brnik</option>
+                            <option value="Letališče Maribor">Letališče Maribor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="velikostAvto">Velikost avtomobila:</label>
+                            <div id="velikostAvto">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="velikostAvtoOptions"
+                                        id="majhenAvto" value="majhen" checked="">
+                                    <label class="form-check-label" for="majhenAvto">Majhen</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="velikostAvtoOptions"
+                                        id="srednjiAvto" value="srednji">
+                                    <label class="form-check-label" for="srednjiAvto">Srednji</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="velikostAvtoOptions"
+                                        id="velikAvto" value="velik">
+                                    <label class="form-check-label" for="velikAvto">Velik</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="menjalnik" data-toggle="tooltip" data-placement="top"
+                                title="Vsebuje vrste avtomobila glede na velikost.">Vrsta menjalnika:</label>
+                            <div id="menjalnik">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="menjalnikOptions" id="avtomatski"
+                                        value="avtomatski" checked="">
+                                    <label class="form-check-label" for="avtomatski">Avtomatski</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="menjalnikOptions" id="rocni"
+                                        value="rocni">
+                                    <label class="form-check-label" for="rocni">Ročni</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="tipMotorja" data-toggle="tooltip" data-placement="top"
+                                title="Vsebuje vrste avtomobila glede na velikost.">Tip motorja:</label>
+                            <div id="tipMotorja">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipMotorjaOptions" id="bencinski"
+                                        value="bencinski" checked="">
+                                    <label class="form-check-label" for="bencinski>Bencinski</label>
+                                </div>
+                                <div class=" form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tipMotorjaOptions"
+                                            id="dieselski" value="dieselski>
+                                    <label class=" form-check-label" for="dieselski">Dieselski</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="modelAvto">Seznam avtomobilov</label>
+                    <select id="modelAvto" class="form-control" size="10" style="width: 100%;" required>
+                    </select>
+                    <div class="invalid-feedback">
+                        Izberite enega izmed modelov avtomobilov!
+                    </div>
+                </div>
+            </form>
+
+            <hr class="mt-5">
+
+            <div class="card-body">
+                <h5>
+                    Dodatne možnosti najema:
+                </h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="dodatnoZavarovanje">
+                    <label class="form-check-label" for="dodatnoZavarovanje">
+                        Dodatno zavarovanje (2€/dan)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="stresniPritljaznik">
+                    <label class="form-check-label" for="stresniPritljaznik">
+                        Strešni pritljažnik (5€/dan)
+                    </label>
+                </div>
+            </div>
+
+            <hr class="mb-5">
+
+            <button class="btn btn-primary" onclick="test()">Nadaljuj</button>
+        </div>
+
+    </div>
+
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/moment.min.js"></script>
+    <script src="assets/popper.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+    <script src="assets/bootstrap-select.js"></script>
+    <script src="assets/datepicker/daterangepicker.js"></script>
+
+    <script src="izbor.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Avtek</title>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div>
+            <h5>Podatki o najemniku</h5>
+            <hr>
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="ime" class="form-label">Ime:</label>
+                        <input type="text" class="form-control" id="ime" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite vaše ime.
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="priimek" class="form-label">Priimek:</label>
+                        <input type="text" class="form-control" id="priimek" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite vaš priimek.
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="starost" class="form-label">Starost:</label>
+                        <input type="number" class="form-control" id="starost" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite vašo starost.
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label for="starostIzpita" class="form-label">Starost izpita:</label>
+                        <input type="number" class="form-control" id="starostIzpita" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite starost izpita v letih.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-md-4 mb-3">
+                        <label for="ulica">Ulica:</label>
+                        <input type="text" id="ulica" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite veljavno ulico ali kraj bivališča.
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <label for="hisnaSt">Hišna številka:</label>
+                        <input type="text" id="hisnaSt" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite veljavno hišno številko.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="posta">Pošta:</label>
+                        <input type="text" id="posta" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite veljaven kraj pošte.
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="postnaSt">Poštna številka:</label>
+                        <input type="text" id="postnaSt" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite veljavno poštno številko s točno 4 številkami.
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="my-5">
+            <h5>Podrobnosti najema in plačilo</h5>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h5 class="card-header">Podrobnosti najema</h5>
+                        <div class="card-body">
+                            <h5>
+                                Izbrano vozilo
+                            </h5>
+                            <ul class="list mb-0">
+                                <li class="list-item d-flex justify-content-between lh-condensed">
+                                    <div>
+                                        <h6 class="my-0">Velikost avtomobila</h6>
+                                    </div>
+                                    <span class="text-muted" id="velikostAvtomobilaInfo">Velik</span>
+                                </li>
+                                <li class="list-item d-flex justify-content-between lh-condensed">
+                                    <div>
+                                        <h6 class="my-0">Model avtomobila</h6>
+                                    </div>
+                                    <span class="text-muted" id="modelAvtomobilaInfo">Ford Focus</span>
+                                </li>
+                                <li class="list-item d-flex justify-content-between lh-condensed">
+                                    <div>
+                                        <h6 class="my-0">Vrsta menjalnika</h6>
+                                    </div>
+                                    <span class="text-muted" id="vrstaMenjalnikaInfo">Avtomatski</span>
+                                </li>
+                                <li class="list-item d-flex justify-content-between lh-condensed">
+                                    <div>
+                                        <h6 class="my-0">Tip motorja</h6>
+                                    </div>
+                                    <span class="text-muted" id="vrstaGorivaInfo">Bencinski</span>
+                                </li>
+                            </ul>
+
+                            <hr>
+
+                            <h5>
+                                Drugi podatki
+                            </h5>
+                            <ul class="list mb-0">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="my-0">Termin najema</h6>
+                                    </div>
+                                    <span id="terminNajema">15.11.2022-16.11.2022 (1 dan)</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="my-0">Kraj najema</h6>
+                                    </div>
+                                    <span id="krajNajema">Ljubljana</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="my-0">Kraj oddaje</h6>
+                                    </div>
+                                    <span id="krajOddaje">Celje</span>
+                                </div>
+                            </ul>
+
+                            <hr>
+
+                            <h5>
+                                Dodatna oprema in zavarovanje
+                            </h5>
+                            <ul class="list mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="my-0">Dodatno avtomobilsko zavarovanje</h6>
+                                    </div>
+                                    <span id="dodatnoZavarovanjeInfo">Da</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="my-0">Strešni pritljažnik</h6>
+                                    </div>
+                                    <span id="stresniPritljaznikInfo">Da</span>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card mb-5">
+                        <h5 class="card-header">Znesek najema</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="mb-3" id="cenik">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h6 class="my-0">Cena vozila</h6>
+                                        </div>
+                                        <span id="cenaVozila">98,77€/dan</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="my-0">Skupna cena</h6>
+                                        <strong id="skupnaCena">105,77€/dan</strong>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <h6 id="koncniZnesekText" class="my-0">Končen znesek (10 dni x 105,77)</h6>
+                                    <strong id="koncniZnesek">1057,70€</strong>
+                                </div>
+                            </div>
+
+                            <div class="mt-5">
+                                <form>
+                                    <label for="nacinPlacila" data-toggle="tooltip" data-placement="top"
+                                        title="Vsebuje način plačila računa.">Način plačila:</span></label>
+                                    <div id="nacinPlacila">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" checked="" id="gotovina"
+                                                name="inlineRadioOptions" value="gotovina">
+                                            <label class="form-check-label" for="gotovina">Gotovina</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="kartica" value="kartica"
+                                                name="inlineRadioOptions">
+                                            <label class="form-check-label" for="kartica">Kartica</label>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-8 mb-3">
+                                            <label for="stKartice" data-toggle="tooltip" data-placement="top"
+                                                title="Vsebuje številko kreditne kardite.">Številka kartice:</label>
+                                            <input type="number" id="stKartice" class="form-control"
+                                                placeholder="Številka kartice" disabled required>
+                                            <div class="invalid-feedback">
+                                                Vnesite veljavno številko kartice!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="ccv">CCV:</label>
+                                            <input type="number" id="ccv" class="form-control" placeholder="CCV"
+                                                required disabled>
+                                            <div class="invalid-feedback">
+                                                Vnesite veljaven CCV!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <button id="urediIzbor" onclick=window.location.href='izbor.html'
+                                class="btn btn-danger mt-3">Uredi najem</button>
+                            <button id="urediIzbor" onclick="submit()" class="btn btn-primary mt-3">Potrdi
+                                najem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="porociloModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Najem uspešno opravljen</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Najem je bil uspešno opravljen!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="window.location.href='izbor.html'"
+                            data-dismiss="modal">Končaj z najemom</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/jquery.min.js"></script>
+        <script src="assets/moment.min.js"></script>
+        <script src="assets/popper.min.js"></script>
+        <script src="assets/bootstrap.min.js"></script>
+        <script src="assets/bootstrap-select.js"></script>
+        <script src="najem.js"></script>
+</body>
+
+</html>
