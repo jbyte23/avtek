@@ -8,8 +8,8 @@ function zapolniPodatke() {
     document.getElementById("terminNajema").innerHTML = sessionStorage.obdobjeNajema;
     document.getElementById("krajNajema").innerHTML = sessionStorage.krajPrevzema;
     document.getElementById("krajOddaje").innerHTML = sessionStorage.krajOddaje;
-    document.getElementById("dodatnoZavarovanjeInfo").innerHTML = sessionStorage.dodatnoZavarovanje ? "Da" : "Ne";
-    document.getElementById("stresniPritljaznikInfo").innerHTML = sessionStorage.stresniPritljaznik ? "Da" : "Ne";
+    document.getElementById("dodatnoZavarovanjeInfo").innerHTML = sessionStorage.dodatnoZavarovanje === "true" ? "Da" : "Ne";
+    document.getElementById("stresniPritljaznikInfo").innerHTML = sessionStorage.stresniPritljaznik === "true" ? "Da" : "Ne";
 
     let cena = 0
     if (sessionStorage.dodatnoZavarovanje === "true") {

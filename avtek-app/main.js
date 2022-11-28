@@ -9,7 +9,7 @@ const createWindow = () => {
     win.loadFile('izbor.html');
 
     // Open the DevTools.
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
 };
 
 app.whenReady().then(() => {
